@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <link rel="icon" href="https://static.wikia.nocookie.net/minecraft_gamepedia/images/4/44/Bread_JE3_BE3.png/revision/latest?cb=20190503044317">
+  <title>Please feed duck</title>
+</head>
+
+<body onload="load()">
+
+  <div style="margin:0 auto;text-align: center">
+    <div style="margin-left:auto;margin-right:auto;text-align: center;">
+      
+      <h1>Total bread given: <span id="bread">0</span></h1>
+      <img id="drag1" src="duck.png" width="500" height="500">
+      
+      <h2>Give bread to duck</h2>
+      <button onclick="bread()"><img id="drag1" src="Bread.png" width="200" height="200"></button>
+    </div>
+  </div>
+
+
+  <script>
+    function bread() {
+      var audio = new Audio("Quack.mp3")
+      audio.play();
+      var bread = document.getElementById("bread");
+      bread.innerHTML = parseInt(bread.innerHTML) + 1;
+      localStorage.setItem("bread", bread.innerHTML);
+    }
+
+    function load() {
+      var bread = document.getElementById("bread")
+      var value = localStorage.getItem("bread")
+
+      if (value) {
+        bread.innerHTML = value;
+      }
+    }
+  </script>
+</body>
+
+
+
+</html>
