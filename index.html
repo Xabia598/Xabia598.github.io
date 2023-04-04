@@ -1,44 +1,46 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/x-icon" href="xabia.ico">
   <title>Please feed duck</title>
 </head>
 
-<body onload="load()">
+<h1 style="text-align:center; font-family: 'OCR A Std', monospace, sans-serif;">Welcome to Xabia's Github page!</h1>
+<p style="text-align:center; font-style: italic;">Please note this is still on-dev</p>
 
-  <div style="margin:0 auto;text-align: center">
-    <div style="margin-left:auto;margin-right:auto;text-align: center;">
-      
-      <h1>Total bread given: <span id="bread">0</span></h1>
-      <img id="drag1" src="duck.png" width="500" height="500">
-      
-      <h2>Give bread to duck</h2>
-      <button onclick="bread()"><img id="drag1" src="Bread.png" width="200" height="200"></button>
-    </div>
-  </div>
+<style>
+  .center1 {
+    margin: 0;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%)
+  }
 
+  .center2 {
+    margin: 0;
+    position: absolute;
+    top:25%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%)
+  }
+</style>
 
-  <script>
-    function bread() {
-      var audio = new Audio("Quack.mp3")
-      audio.play();
-      var bread = document.getElementById("bread");
-      bread.innerHTML = parseInt(bread.innerHTML) + 1;
-      localStorage.setItem("bread", bread.innerHTML);
-    }
+<script type = "text/javascript">
+  function profile() {
+    window.location.href = "https://github.com/Xabia598";
+  }
+</script>
 
-    function load() {
-      var bread = document.getElementById("bread")
-      var value = localStorage.getItem("bread")
+<div class="center1">
+  <input type=button onclick= "profile()" value="Projects">
+</div>
 
-      if (value) {
-        bread.innerHTML = value;
-      }
-    }
-  </script>
-</body>
-
-
+<div class="center2">
+  <input type=button onclick= "profile()" value="Github profile">
+  <img src="xabiacat.png" width="100" height="100">
+</div>
 
 </html>
