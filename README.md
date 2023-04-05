@@ -1,8 +1,4 @@
-# Xabia598.github.io
-Feed my virtual duck!!1!
+# Xabia's Web
+Welcome to my website!
 
-All the bread my duck eats, will be displayed on the screen!
-
-# How does it work?
-
-Press the bread button to feed my duck!
+Here you can know more about my programs and developing!
